@@ -25,21 +25,56 @@
     
     <section id="about">
         <h2>About Me</h2>
-        <p>Details about your background and interests.</p>
+        <p>I am passionate about programming and games, with a particular interest in chess. Computers are a big part of my life, and I enjoy indulging in pizza and cooking them from scratch. Currently, I am focused on my studies and am working diligently to excel in my academic pursuits. For my future I plan to do my honors as well.</p>
     </section>
     
     <section id="skills">
         <h2>Skills</h2>
         <ul>
-            <li>Skill 1</li>
-            <li>Skill 2</li>
-            <li>Skill 3</li>
+            <li><h3>Programming Languages</h3>
+                <ul>
+                    <li>C++</li>
+                    <li>C</li>
+                    <li>C#</li>
+                    <li>Java</li>
+                    <li>JavaScript</li>
+                    <li>Node.js</li>
+                    <li>SVG</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>Delphi 7</li>
+                    <li>Python3</li>
+                    <li>MySQL</li>
+                    <li>PL/Sql</li>
+                    <li>Unity</li>
+                </ul>
+            </li>
+            <li><h3>Databases</h3>
+                <ul>
+                    <li>Oracle</li>
+                    <li>VBA</li>
+                    <li>SQLServer</li>
+                </ul>
+            </li>
+            <li><h3>Other Notable Software</h3>
+                <ul>
+                    <li>MatLab</li>
+                    <li>GitHub</li>
+                    <li>Microsoft Office</li>
+                    <li>Microsoft Teams</li>
+                </ul>
+            </li>
+            <li><h3>Extra</h3>
+                <ul>
+                    <li>Chess</li>
+                    <li>Pizza Making</li>
+                </ul>
         </ul>
     </section>
     
     <section id="projects">
         <h2>Projects</h2>
-        <p>Description of your projects with links.</p>
+        <p><a href="//github.com/SrederE777/CMPG-223-Project-WlidWaters">Wild Waters Project</a></p>
     </section>
     
     <section id="experience">
@@ -64,36 +99,8 @@
     <!-- Back to Top Button -->
     <a href="#" id="back-to-top" title="Back to Top">&uarr;</a>
 
-    <!-- JavaScript for Smooth Scrolling -->
-    <script>
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
 
-        // Back to Top Button Visibility
-        const backToTopButton = document.getElementById('back-to-top');
-        
-        window.onscroll = function() {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                backToTopButton.style.display = 'block';
-            } else {
-                backToTopButton.style.display = 'none';
-            }
-        };
-
-        // Scroll to top when button is clicked
-        backToTopButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
+<!-- Link to the external JavaScript file -->
+<script src="backbutton.js"></script>
 </body>
 </html>
