@@ -1,24 +1,58 @@
+/* Basic Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    color: #fff;
+    overflow-x: hidden;
+    background-color: #000; /* Fallback color */
 }
 
+/* Space Background with Twinkling Stars */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000 url('/stars.svg') repeat;
+    background-size: contain;
+    z-index: -1;
+    animation: moveStars 200s linear infinite;
+    transform: translateY(0);
+}
+
+
+/* Parallax Effect */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.1); /* Slight transparency */
+    backdrop-filter: blur(10px); /* Background blur effect */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Header Styling */
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 20px;
+    padding: 20px 20px;
     text-align: center;
+    animation: slideInDown 1s ease-in-out;
 }
 
+/* Navigation Styling */
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
     background-color: #444;
+    animation: fadeIn 2s ease-in-out;
 }
 
 nav ul li {
@@ -30,19 +64,132 @@ nav ul li a {
     text-decoration: none;
     padding: 10px;
     display: block;
+    transition: transform 0.3s, font-size 0.3s; /* Apply transition here */
+    transform: scale(1); /* Default scale */
+    font-size: 1.2em; /* Default font size */
 }
 
+nav ul li:hover a {
+    transform: scale(1.5);
+    font-size: 1.6em;
+}
+
+
+
+/* Keyframe Animations */
+@keyframes moveStars {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 10000px;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Back to Top Button Styles */
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #949292;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 18px;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 1s ease;
+}
+
+#back-to-top:hover {
+    background-color: #555;
+}
+
+/* Section Styling */
 section {
     padding: 20px;
     margin: 20px auto;
     max-width: 800px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1.5s ease-in-out;
 }
 
+/* Footer Styling */
 footer {
     text-align: center;
     padding: 10px;
     background-color: #333;
     color: #fff;
+    animation: slideInUp 1s ease-in-out;
+}
+
+/* Keyframe Animations */
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+
+    
 }
