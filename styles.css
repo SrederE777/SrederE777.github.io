@@ -38,26 +38,36 @@ section {
 
 /* Header Styling */
 header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #030020;
     color: #ffffff;
-    padding: 20px 20px;
-    text-align: center;
+    padding: 30px 20px;
     animation: slideInDown 1s ease-in-out;
 }
 
 #imagetop {
-    position: absolute;
-    top: 3px; 
-    right: 25%; 
     height: auto;
-    max-height: 135px; 
-    width: auto; 
-    border: 5px solid transparent; 
-    border-radius: 50%; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    padding: 3px; 
-    background: linear-gradient(135deg, blue, purple); 
-    background-clip: padding-box; 
+    max-height: 150px;
+    width: auto;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 3px;
+    background: linear-gradient(135deg, blue, purple);
+    background-clip: padding-box;
+    margin-left: 20px;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+
+    #imagetop {
+        max-height: 120px; /* Adjust size for smaller screens */
+        margin-left: 0; /* Remove margin on smaller screens */
+        margin-top: 20px; /* Add space above the image */
+    }
 }
 
 /* Navigation Styling */
