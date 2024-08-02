@@ -7,7 +7,7 @@ version: 2
 
 # Personal info
 name: Schalk Willem Burger
-title: University Third Year in Information Technology
+title: University Student Third Year in Information Technology
 email: SrederE777@gmail.com
 website: www.github.com/sproogen/resume-theme
 
@@ -16,7 +16,7 @@ darkmode: true
 
 # Social links
 twitter_username: facespics
-github_username:  SrederE777@gmail.com
+github_username:  SrederE777
 # stackoverflow_username: "00000001"
 # dribbble_username: jekyll
 # facebook_username: jekyll
