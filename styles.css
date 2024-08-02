@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #2400ee;
+    color: #ffffff;
     overflow-x: hidden;
     background-color: #000; /* Fallback color */
 }
@@ -38,8 +38,8 @@ section {
 
 /* Header Styling */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #030020;
+    color: #ffffff;
     padding: 20px 20px;
     text-align: center;
     animation: slideInDown 1s ease-in-out;
@@ -74,6 +74,20 @@ nav ul li:hover a {
     font-size: 1.6em;
 }
 
+/*set hyperlink colors */
+section a {color: deepskyblue;}
+section a:visited {color: #b10099}
+section a:focus:hover {color: #10009c}
+
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #030020;
+    color: #030020;
+    animation: slideInUp 1s ease-in-out;
+}
 
 /* Keyframe Animations */
 @keyframes moveStars {
@@ -115,25 +129,6 @@ nav ul li:hover a {
 
 #back-to-top:hover {
     background-color: #555;
-}
-
-/* Section Styling */
-section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    animation: fadeInUp 1.5s ease-in-out;
-}
-
-/* Footer Styling */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    animation: slideInUp 1s ease-in-out;
 }
 
 /* Keyframe Animations */
