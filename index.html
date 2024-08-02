@@ -12,7 +12,7 @@
         <p>A virtual CV</p>
     </header>
     
-    <nav>
+    <nav id="topnav">
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -21,6 +21,11 @@
             <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
     </nav>
     
     <section id="about">
@@ -95,7 +100,7 @@
             <li>
                 <h3>Chess Coaching</h3>
                     <p>
-                        Was a chess coach at at school giving classes at Centurion Christian School.
+                        Was a chess coach at school giving classes at Centurion Christian School.
                     </p>
             </li>
             <li>
@@ -156,5 +161,18 @@
 
 <!-- Link to the external JavaScript file -->
 <script src="backbutton.js"></script>
+<script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('nav ul');
+
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('nav-active');
+    });
+
+    nav.addEventListener('mouseleave', () => {
+        nav.classList.remove('nav-active');
+});
+</script>
+
 </body>
 </html>

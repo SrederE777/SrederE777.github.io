@@ -45,6 +45,7 @@ header {
     animation: slideInDown 1s ease-in-out;
 }
 
+
 /* Navigation Styling */
 nav ul {
     list-style: none;
@@ -73,6 +74,48 @@ nav ul li:hover a {
     transform: scale(1.5);
     font-size: 1.6em;
 }
+
+/* Burger Menu Styling */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    z-index: -1000;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .nav-active {
+        display: flex;
+    }
+}
+
 
 /*set hyperlink colors */
 section a {color: deepskyblue;}
@@ -189,6 +232,24 @@ footer {
     
 }
 
-@media only screen and (max-width: 767px){
-    
+#mob_menu { display: none;}
+/*tablet portrait layout (768px to 959px) */
+@media only screen and (max-width: 959px){
+    #menu { display: none;}
+    #mob_menu { display: block;}
+    .slicknav_menu {background-color: #444 !important;}
+}
+
+/*mobile landscape layout (480px to 767px) */
+@media only screen and (max-width: 767px) {
+    #menu { display: none;}
+    #mob_menu { display: block;}
+    .slicknav_menu {background-color: #444 !important;}
+}
+
+/*mobile portrait layout (479px or less) */
+@media only screen and (max-width: 479px) {
+    #menu { display: none;}
+    #mob_menu { display: block;}
+    .slicknav_menu {background-color: #444 !important;}
 }
