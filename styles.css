@@ -45,9 +45,31 @@ header {
     animation: slideInDown 1s ease-in-out;
 }
 
+#imagetop {
+    position: absolute;
+    top: 3px; 
+    right: 25%; 
+    height: auto;
+    max-height: 135px; 
+    width: auto; 
+    border: 5px solid transparent; 
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    padding: 3px; 
+    background: linear-gradient(135deg, blue, purple); 
+    background-clip: padding-box; 
+}
 
 /* Navigation Styling */
-nav ul {
+#topnav {
+    background-color: #444;
+    animation: fadeIn 2s ease-in-out;
+    display: flex;
+    padding: 0;
+    justify-content: center;
+}
+
+nav ul{
     list-style: none;
     padding: 0;
     display: flex;
@@ -79,10 +101,10 @@ nav ul li:hover a {
 .burger {
     display: none;
     cursor: pointer;
+    justify-content: center;
 }
 
 .burger div {
-    z-index: -1000;
     width: 25px;
     height: 3px;
     background-color: #fff;
@@ -92,14 +114,27 @@ nav ul li:hover a {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    nav {
+        position: relative;
+    }
+
+    .burger {
+        display: inline-block;
+        position: relative;
+        margin: 0 auto;
+        top: 0px; /* Adjust to position the burger menu */
+        z-index: 1000; /* Ensure it's above other elements */
+    }
+
     nav ul {
         display: none;
-        flex-direction: column;
+        flex-direction: column-reverse;
         width: 100%;
-        position: relative;
-        top: 60px;
+        position: absolute;
+        top: 100%; /* Position the list below the burger */
         left: 0;
         background-color: #333;
+        z-index: 999; /* Ensure it's above other elements but below the burger */
     }
 
     nav ul li {
@@ -107,14 +142,13 @@ nav ul li:hover a {
         margin: 10px 0;
     }
 
-    .burger {
-        display: block;
-    }
-
     .nav-active {
-        display: flex;
+        display: flex; /* Use flex to display the list */
+        flex-direction: column; /* Stack the items vertically */
     }
 }
+
+
 
 
 /*set hyperlink colors */
